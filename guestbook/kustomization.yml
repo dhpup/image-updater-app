@@ -6,4 +6,4 @@ resources:
 - guestbook-service.yml
 images:
 - name: dhpup/guestbook
-  newTag: sha-55d29f6
+#  newTag: sha-55d29f6
