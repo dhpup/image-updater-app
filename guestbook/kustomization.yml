@@ -4,3 +4,6 @@ kind: Kustomization
 resources:
 - guestbook-deployment.yml
 - guestbook-service.yml
+images:
+- name: dhpup/guestbook
+  newTag: sha-55d29f6

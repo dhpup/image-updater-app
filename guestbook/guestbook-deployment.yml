@@ -14,7 +14,7 @@ spec:
         app: guestbook
     spec:
       containers:
-      - image: dhpup/guestbook:sha-55d29f6
+      - image: dhpup/guestbook
         name: guestbook
         ports:
         - containerPort: 80
