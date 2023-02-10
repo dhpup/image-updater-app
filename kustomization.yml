@@ -1,0 +1,7 @@
+namePrefix: kustomize-
+
+resources:
+- guestbook-deployment.yml
+- guestbook-service.yml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
