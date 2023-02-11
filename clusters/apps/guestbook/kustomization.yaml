@@ -5,6 +5,5 @@ resources:
 - deployment.yaml
 - service.yaml
 images:
-- name: dhpup/guestbook
+- name: ghcr.io/dhpup/guestbook
   newTag: main
-  newName: ghcr.io/dhpup/guestbook
