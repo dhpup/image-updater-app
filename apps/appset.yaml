@@ -20,6 +20,8 @@ spec:
       name: '{{path.basename}}-{{name}}'
       annotations:
         argocd-image-updater.argoproj.io/image-list: guestbook
+        argocd-image-updater.argoproj.io/write-back-method: git
+        argocd-image-updater.argoproj.io/write-back-target: kustomization
     spec:
       destination:
         namespace: '{{path.basename}}'
