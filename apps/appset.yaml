@@ -19,7 +19,7 @@ spec:
     metadata:
       name: '{{path.basename}}-{{name}}'
       annotations:
-        notifications.argoproj.io/subscribe.slack: test-dan
+        argocd-image-updater.argoproj.io/image-list
     spec:
       destination:
         namespace: '{{path.basename}}'
