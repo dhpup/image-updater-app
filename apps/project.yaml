@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: apps
+spec:
+  sourceRepos:
+    - https://github.com/dhpup/image-updater-app.git
+  destinations:
+    - namespace: guestbook
+      server: '*'
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'

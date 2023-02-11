@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: apps
+spec:
+  generators:
+  - matrix:
+      generators:
+      - clusters:
+          selector:
+            matchLabels:
+              apps: 'enabled'
+      - git:
+          repoURL: https://github.com/dhpup/image-updater-app.git
+          revision: HEAD
+          directories:
+          - path: clusters/apps/*
+  template:
+    metadata:
+      name: '{{path.basename}}-{{name}}'
+      annotations:
+        notifications.argoproj.io/subscribe.slack: test-dan
+    spec:
+      destination:
+        namespace: '{{path.basename}}'
+        server: '{{server}}'
+      source:
+        repoURL: https://github.com/dhpup/image-updater-app.git
+        targetRevision: HEAD
+        path: '{{path}}'
+      project: apps
+      syncPolicy:
+        automated:
+          prune: true
+        syncOptions:
+          - CreateNamespace=true
