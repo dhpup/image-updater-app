@@ -22,7 +22,8 @@ spec:
         argocd-image-updater.argoproj.io/image-list: guestbook=dhpup/guestbook
         argocd-image-updater.argoproj.io/write-back-method: git
         argocd-image-updater.argoproj.io/write-back-target: kustomization
-        argocd-image-updater.argoproj.io/guestbook.update-strategy: latest
+        argocd-image-updater.argoproj.io/guestbook.update-strategy: digest
+        argocd-image-updater.argoproj.io/argocd.force-update: true
     spec:
       destination:
         namespace: '{{path.basename}}'
