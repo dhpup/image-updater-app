@@ -6,4 +6,5 @@ resources:
 - service.yaml
 images:
 - name: dhpup/guestbook
-  newTag: sha-cf15694
+  newTag: main
+  newName: ghcr.io/dhpup/guestbook
