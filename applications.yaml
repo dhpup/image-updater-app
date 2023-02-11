@@ -5,7 +5,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/dhpup/image-updater-apps'
+    repoURL: 'git@github.com:dhpup/image-updater-app.git'
     path: apps
     targetRevision: HEAD
   destination:
