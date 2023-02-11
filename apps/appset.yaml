@@ -19,7 +19,7 @@ spec:
     metadata:
       name: '{{path.basename}}-{{name}}'
       annotations:
-        argocd-image-updater.argoproj.io/image-list
+        argocd-image-updater.argoproj.io/image-list: guestbook
     spec:
       destination:
         namespace: '{{path.basename}}'
