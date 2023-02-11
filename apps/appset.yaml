@@ -19,10 +19,11 @@ spec:
     metadata:
       name: '{{path.basename}}-{{name}}'
       annotations:
-        argocd-image-updater.argoproj.io/image-list: guestbook=dhpup/guestbook:sha-*
+        argocd-image-updater.argoproj.io/image-list: guestbook=dhpup/guestbook
         argocd-image-updater.argoproj.io/write-back-method: git
         argocd-image-updater.argoproj.io/write-back-target: kustomization
-        argocd-image-updater.argoproj.io/guestbook.update-strategy: digest
+        argocd-image-updater.argoproj.io/guestbook.update-strategy: latest
+        argocd-image-updater.argoproj.io/guestbook.allow-tags: regexp:^sha-[0-9a-f]{7}$
         argocd-image-updater.argoproj.io/argocd.force-update: 'true'
     spec:
       destination:
