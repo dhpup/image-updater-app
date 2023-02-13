@@ -19,10 +19,10 @@ spec:
     metadata:
       name: '{{path.basename}}-{{name}}'
       annotations:
-        argocd-image-updater.argoproj.io/image-list: guestbook=ghcr.io/dhpup/guestbook:main
+        argocd-image-updater.argoproj.io/image-list: guestbook=ghcr.io/dhpup/guestbook
         argocd-image-updater.argoproj.io/write-back-method: git
         argocd-image-updater.argoproj.io/write-back-target: kustomization
-        argocd-image-updater.argoproj.io/guestbook.update-strategy: digest
+        argocd-image-updater.argoproj.io/guestbook.update-strategy: name
         argocd-image-updater.argoproj.io/guestbook.force-update: 'true'
     spec:
       destination:
