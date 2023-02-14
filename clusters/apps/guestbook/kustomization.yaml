@@ -6,4 +6,4 @@ resources:
 - service.yaml
 images:
 - name: ghcr.io/dhpup/guestbook
-  newTag: 001test
+  newTag: 0.1.32
